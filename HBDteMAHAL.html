@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <div id="container">
+        <h1 >Happy Birthday</h1>
+        <p id="birthday1">Ate Mahal</p>
+
+        <button onclick="showPopup()">click me FIRST!</button>
+        <button onclick="showPicturePopup()">click me NEXT!</button>
+        <div id="popup">
+            <span id="close" onclick="closePopup()">X</span>
+            <p>Dear Ate Mahal,</p>
+            <p>I know you will be celebrating your birthday alone and working, 
+                so I will make it extra special by making you this IT thing. 
+                Ka special ba oii, gi code-an man hahahaha. Bitaw Te Mahal, 
+                ever since we are still a child you always make sure na, we, 
+                your siblings know things that you knew, kanang imong motto nga 
+                "di pwedeg ako ray kahibalo, dapat kamo sd", with that I am very thankful of, 
+                you are a selfless sister, you always share your blessings.</p>
+            <p>I don't believe to everyone saying you don't look up to your family, 
+                because you did, i have seen it and felt it, you just have your own ways, 
+                knowing that there's still an inner child that hasn't been healed within in you, 
+                that's a brave move. I just wanna share to you my go-to-quote, "this too shall pass" 
+                that whatever circumstances in your life, it wont last forever, and puhon2 all will be well, 
+                kaya kapit ka lang jan, on the way na lagi ang American Dream. Gi nganlan kag Christ for a reason, 
+                because just like Jesus Christ, he was stumbled many times on his journey to the cross, 
+                means that the struggles we face are not meant to defeat us but to refine us, 
+                shaping us into a better person.  Let the journey to the cross inspire you to rise above 
+                adversity with grace and courage. I know there's a lot of people talk trash behind your back
+                 but i know the truth, and that i will hold till forever. YOU ARE A GOOD SISTER AND A GOOD DAUGHTER. 
+                 Basta dating gawi, if you need a sisterly advice, I will always got your back.  </p>
+            <p>I love you Te Mahal mwah mwah, stay safe ka jan sa Republic of Colorado.</p>
+            <audio controls autoplay>
+                <source src="HAPPY BIRTHDAY INSTRUMENTAL (Acoustic Guitar & Piano Romantic Arrangement - by hsc501).mp3">
+               </audio>         
+        </div>
+        <div id="picturePopup">
+          <span id="close" onclick="closePicturePopup()">X</span>
+          <img src="https://media3.giphy.com/media/fxsW3PnQx06N7Mop3D/giphy.gif">
+          <p> yieehhh happy burtdeeyy te mahal mwah mwah. As you blow this virtual candles
+            may all your wishes come true</p>
+        </div>
+      </div>
+      
+
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+        function showPicturePopup() {
+            document.getElementById('picturePopup').style.display = 'block';
+        }
+
+        function closePicturePopup() {
+            document.getElementById('picturePopup').style.display = 'none';
+        }
+        function playPopupAudio() {
+        var audio = document.getElementById('popupAudio');
+        audio.play();
+    }
+
+    function stopPopupAudio() {
+        var audio = document.getElementById('popupAudio');
+        audio.pause();
+        audio.currentTime = 0;
+    }
+    </script>
+</body>
+</html>
