@@ -9,6 +9,10 @@
 <body>
   
     <div id="container">
+        <h2>Smile Before You Click!</h2>
+        <button id="myButton"onclick="showBirthdayPage()">Click Me!</button>
+    </div>
+    <div id="birthdayPage" style="display: none;">
         <h1 >Happy Birthday</h1>
         <p id="birthday1">Ate Mahal</p>
 
@@ -16,6 +20,10 @@
         <button onclick="showPicturePopup()">click me NEXT!</button>
         <div id="popup">
             <span id="close" onclick="closePopup()">X</span>
+            <p>Play the music first, para ma feel nimo ang letter hehe.</p>
+            <audio controls autoplay>
+                <source src="HAPPY BIRTHDAY INSTRUMENTAL (Acoustic Guitar & Piano Romantic Arrangement - by hsc501).mp3">
+               </audio> 
             <p>Dear Ate Mahal,</p>
             <p>I know you will be celebrating your birthday alone and working, 
                 so I will make it extra special by making you this IT thing. 
@@ -37,21 +45,23 @@
                  but i know the truth, and that i will hold till forever. YOU ARE A GOOD SISTER AND A GOOD DAUGHTER. 
                  Basta dating gawi, if you need a sisterly advice, I will always got your back.  </p>
             <p>I love you Te Mahal mwah mwah, stay safe ka jan sa Republic of Colorado.</p>
-            <audio controls autoplay>
-                <source src="HAPPY BIRTHDAY INSTRUMENTAL (Acoustic Guitar & Piano Romantic Arrangement - by hsc501).mp3">
-               </audio>         
+                    
         </div>
         <div id="picturePopup">
           <span id="close" onclick="closePicturePopup()">X</span>
-          <img src="https://media3.giphy.com/media/fxsW3PnQx06N7Mop3D/giphy.gif">
+          <img id="image" src="https://media0.giphy.com/media/fxsW3PnQx06N7Mop3D/giphy.gif" onclick="changeImage()">
           <p> yieehhh happy burtdeeyy te mahal mwah mwah. As you blow this virtual candles
-            may all your wishes come true</p>
+            may all your wishes come true.</p>
+          <p>click the pix to see how we love each other.</p>
         </div>
+    </div>
       </div>
-      
-
 
     <script>
+        function showBirthdayPage() {
+            document.getElementById('container').style.display = 'none';
+            document.getElementById('birthdayPage').style.display = 'block';
+        }
         function showPopup() {
             document.getElementById('popup').style.display = 'block';
         }
@@ -76,6 +86,23 @@
         audio.pause();
         audio.currentTime = 0;
     }
+    var currentImage = 1;
+    function changeImage() {
+            var imageElement = document.getElementById('image');
+
+            switch (currentImage) {
+                case 1:
+                    imageElement.src = 'https://media0.giphy.com/media/fxsW3PnQx06N7Mop3D/giphy.gif';
+                    currentImage = 2;
+                    break;
+                case 2:
+                    imageElement.src = 'https://i.pinimg.com/736x/23/2d/d4/232dd447b9897c71a4eb6f45985e80c3.jpg';
+                    currentImage = 1;
+                    break;
+                default:
+                    break;                   
+            }
+    }                        
     </script>
 </body>
 </html>
