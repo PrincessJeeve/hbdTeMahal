@@ -25,6 +25,14 @@ h1 {
     -webkit-text-stroke: 1px hotpink;
     animation: bounce 1s infinite;
 }
+h2 {
+    font-family: Lucida Sans Unicode;
+    font-size: 3em; /* Adjusted font size for iPhone 13 Pro */
+    color: hotpink;
+    margin: 0;
+    padding: 10px;
+    text-align: center; 
+}
 
 #birthday1 {
     font-family: Lucida Sans Unicode;
@@ -32,6 +40,7 @@ h1 {
     color: hotpink;
     margin: 0;
     padding: 10px;
+    text-align: center;
 }
 
 button {
@@ -44,6 +53,7 @@ button {
     cursor: pointer;
     margin-top: 20px;
     transition: background-color 0.3s ease;
+    margin-left: 40px;
 }
 
 button:hover {
@@ -85,18 +95,38 @@ button:hover {
 }
 
 #picturePopup img {
-    max-width: 300px; /* Adjusted max-width for iPhone 13 Pro */
+    max-width: 100%;
     height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
+img:hover {
+    transform: scale(1.1);
+}
 #close {
     color: #ff69b4;
     font-size: 1em; /* Adjusted font size for iPhone 13 Pro */
     font-weight: bold;
     cursor: pointer;
     float: right;
+}
+#myButton {
+    background-color: hotpink;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em; /* Adjusted font size for iPhone 13 Pro */
+    border: 2px hotpink;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    margin-right: 50px;
+}
+
+#myButton:hover {
+    background-color: #d1478e; /* Darker green on hover */
 }
 
 @keyframes bounce {
@@ -109,4 +139,14 @@ button:hover {
     60% {
         transform: translateY(-3px); /* Adjusted translateY for iPhone 13 Pro */
     }
+}
+img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.1);
 }
