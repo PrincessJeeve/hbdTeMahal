@@ -49,7 +49,7 @@ button {
     background-color: hotpink;
     color: #fff;
     padding: 10px 20px;
-    font-size: 1.1em; /* Adjusted font size for iPhone 13 Pro */
+    font-size: 1em; /* Adjusted font size for iPhone 13 Pro */
     border: 2px hotpink;
     border-radius: 5px;
     cursor: pointer;
