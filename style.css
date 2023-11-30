@@ -1,6 +1,6 @@
 body {
     background-image: url('https://i.gifer.com/6ob.gif');
-    background-color: rgba(255, 255, 255, 3);
+    background-color: rgba(255, 255, 255, 0.3);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -12,85 +12,64 @@ body {
 
 #container {
     text-align: center;
-    align-items: center;
-    justify-content: center;
 }
 
-h1 {
-    font-family: Lucida Sans Unicode;
-    font-size: 4em; /* Adjusted font size for iPhone 13 Pro */
+h1, h2, #birthday1 {
+    font-family: 'Lucida Sans Unicode';
+    font-size: 3em;
     color: white;
-    margin: 0;
+    margin: auto;
     padding: 10px;
-    -webkit-text-stroke: 1px hotpink;
+    text-align: center;
+    
+}
+h1{
+    color: white;
     animation: bounce 1s infinite;
+    -webkit-text-stroke: 1px hotpink;
 }
 h2 {
-    font-family: Lucida Sans Unicode;
-    font-size: 3em; /* Adjusted font size for iPhone 13 Pro */
     color: hotpink;
-    margin: 0;
-    padding: 10px;
-    text-align: center; 
+    animation: bounce 1s infinite;
 }
 
 #birthday1 {
-    font-family: Lucida Sans Unicode;
-    font-size: 5em; /* Adjusted font size for iPhone 13 Pro */
     color: hotpink;
-    margin: 0;
-    padding: 10px;
-    text-align: center;
+    font-size: 4em;
 }
 
-button {
+button, #myButton {
+
     background-color: hotpink;
     color: #fff;
     padding: 10px 20px;
-    font-size: 1.2em; /* Adjusted font size for iPhone 13 Pro */
-    border: 2px hotpink;
+    font-size: 1.2em;
+    border: 2px solid hotpink;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
     transition: background-color 0.3s ease;
-    margin-left: 40px;
 }
 
-button:hover {
+button:hover, #myButton:hover {
     background-color: #d1478e;
 }
 
-#popup {
+#popup, #picturePopup {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 10px; /* Adjusted padding for iPhone 13 Pro */
+    padding: 10px;
     background-color: #fff;
     border: 2px solid #ff69b4;
     border-radius: 8px;
     text-align: center;
-    font-size: 14px; /* Adjusted font size for iPhone 13 Pro */
-    max-width: 300px; /* Adjusted max-width for iPhone 13 Pro */
-    max-height: 80vh; /* Adjusted max-height for iPhone 13 Pro */
-    overflow-y: auto; /* Allow vertical scrolling */
-    color: #000;
-}
-
-#picturePopup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px; /* Adjusted padding for iPhone 13 Pro */
-    background-color: #fff;
-    border: 2px solid #ff69b4;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 16px; /* Adjusted font size for iPhone 13 Pro */
-    max-width: 300px; /* Adjusted max-width for iPhone 13 Pro */
+    font-size: 14px;
+    max-width: 300px;
+    max-height: 80vh;
+    overflow-y: auto;
     color: #000;
 }
 
@@ -99,36 +78,21 @@ button:hover {
     height: auto;
     cursor: pointer;
     transition: transform 0.3s;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 img:hover {
     transform: scale(1.1);
 }
+
 #close {
     color: #ff69b4;
-    font-size: 1em; /* Adjusted font size for iPhone 13 Pro */
+    font-size: 1em;
     font-weight: bold;
     cursor: pointer;
     float: right;
 }
-#myButton {
-    background-color: hotpink;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 1.2em; /* Adjusted font size for iPhone 13 Pro */
-    border: 2px hotpink;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-    margin-right: 50px;
-}
-
-#myButton:hover {
-    background-color: #d1478e; /* Darker green on hover */
-}
-
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -139,14 +103,4 @@ img:hover {
     60% {
         transform: translateY(-3px); /* Adjusted translateY for iPhone 13 Pro */
     }
-}
-img {
-    max-width: 100%;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-img:hover {
-    transform: scale(1.1);
 }
