@@ -18,7 +18,7 @@ body {
 
 h1 {
     font-family: Lucida Sans Unicode;
-    font-size: 8em;
+    font-size: 4em; /* Adjusted font size for iPhone 13 Pro */
     color: white;
     margin: 0;
     padding: 10px;
@@ -28,7 +28,7 @@ h1 {
 
 #birthday1 {
     font-family: Lucida Sans Unicode;
-    font-size: 10em;
+    font-size: 5em; /* Adjusted font size for iPhone 13 Pro */
     color: hotpink;
     margin: 0;
     padding: 10px;
@@ -38,7 +38,7 @@ button {
     background-color: hotpink;
     color: #fff;
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 1.2em; /* Adjusted font size for iPhone 13 Pro */
     border: 2px hotpink;
     border-radius: 5px;
     cursor: pointer;
@@ -50,32 +50,49 @@ button:hover {
     background-color: #d1478e;
 }
 
-#popup, #picturePopup {
+#popup {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
+    padding: 10px; /* Adjusted padding for iPhone 13 Pro */
     background-color: #fff;
     border: 2px solid #ff69b4;
     border-radius: 8px;
     text-align: center;
-    font-size: 17px;
+    font-size: 14px; /* Adjusted font size for iPhone 13 Pro */
+    max-width: 300px; /* Adjusted max-width for iPhone 13 Pro */
+    height: 500px; /* Adjusted height for iPhone 13 Pro */
     color: #000;
-    max-width: 400px;
 }
 
-#popup img, #picturePopup img {
-    max-width: 100%;
-    height: auto;
+#picturePopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px; /* Adjusted padding for iPhone 13 Pro */
+    background-color: #fff;
+    border: 2px solid #ff69b4;
     border-radius: 8px;
+    text-align: center;
+    font-size: 16px; /* Adjusted font size for iPhone 13 Pro */
+    max-width: 300px; /* Adjusted max-width for iPhone 13 Pro */
+    color: #000;
+}
+
+#picturePopup img {
+    max-width: 300px; /* Adjusted max-width for iPhone 13 Pro */
+    height: auto;
+    border-radius: 8px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #close {
     color: #ff69b4;
-    font-size: 1.2em;
+    font-size: 1em; /* Adjusted font size for iPhone 13 Pro */
     font-weight: bold;
     cursor: pointer;
     float: right;
@@ -86,29 +103,9 @@ button:hover {
         transform: translateY(0);
     }
     40% {
-        transform: translateY(-15px);
+        transform: translateY(-7px); /* Adjusted translateY for iPhone 13 Pro */
     }
     60% {
-        transform: translateY(-5px);
-    }
-}
-
-/* Media Query for Mobile Devices */
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: 4em;
-    }
-
-    #birthday1 {
-        font-size: 6em;
-    }
-
-    button {
-        font-size: 0.8em;
-    }
-
-    #popup, #picturePopup {
-        font-size: 14px;
-        height: auto;
+        transform: translateY(-3px); /* Adjusted translateY for iPhone 13 Pro */
     }
 }
