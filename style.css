@@ -63,7 +63,8 @@ button:hover {
     text-align: center;
     font-size: 14px; /* Adjusted font size for iPhone 13 Pro */
     max-width: 300px; /* Adjusted max-width for iPhone 13 Pro */
-    height: 500px; /* Adjusted height for iPhone 13 Pro */
+    max-height: 80vh; /* Adjusted max-height for iPhone 13 Pro */
+    overflow-y: auto; /* Allow vertical scrolling */
     color: #000;
 }
 
